@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c8763ff3b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+                <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Experience</a></li>
+<!--                 <li><a href="#portfolio">Portfolio</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-square-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>
+                I'm a Fresher
+            </p>
+            <h1>
+                Hi, I'm <span>Sravani</span><br> Yarrapothu from Vijayawada
+            </h1>
+        </div>
+    </div>
+   </div>
+
+
+   <!-- --------------about--------------- -->
+   <div id="about">
+    <div class="container">
+         <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpeg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title ">About Me</h1>
+                <p>
+                    A motivated and detail-oriented computer science student with a strong foundation in programming, algorithms, and software development. Proficient in multiple programming languages, including Python, Java, and C++, with hands-on experience in web development, data structures, and database management. Demonstrated ability to work collaboratively in team settings and effectively communicate complex technical concepts.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('certifications')">Certifications</p>?
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming languages</span><br>C, Java, Python</li>
+                        <li><span>Web Development Languages</span><br>HTML, Javascript, CSS</li>
+                        <li><span>Operating Systems</span><br>Windows</li>
+                    </ul>
+                </div>
+                <div class="tab-contents active-tab" id="certifications">
+                    <ul>
+                        <li><span>Programming in c++</span></li>
+                        <li><span>Programming For Everybody(Python)</span></li>
+                        <li><span>Ai for Everyone</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2018 - 2022</span><br><span> Bachelor of Technology</span> - Computer Science & Engineering<br>SRK Institute Of Techonology</li>
+                        <li><span>2016 - 2018</span><br><span>Intermediate</span> - MPC<br>Sri Chaitanya Jr. College</li>
+                        <li><span>2016</span><br><span>SSC</span> - Bhashyam High School</li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+    </div>
+   </div>
+<!--------------------services--------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title ">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-bolt"></i>
+                <h2>Machine learning</h2>
+                <p>chatbot ai that can assist you to get the prefered options for the given question</p>
+<!--                 <a href="#">Learn more</a> -->
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Developnment</h2>
+                <p>Specializing in custom web development to create responsive, user-friendly websites tailored to meet your business needs</p>
+<!--                 <a href="#">Learn more</a> -->
+            </div>
+            <!-- <div>
+                <i class="fa-solid fa-code"></i> 
+                <h2>Full Stack Developnment</h2>
+                <p>Specializing in full stack development using Java to build robust, scalable applications that deliver seamless user experiences.</p>
+                <a href="#">Learn more</a> -->
+            </div> 
+
+        </div>
+    </div>
+</div>
+
+<!-- ------------------contact--------- -->
+<div id="contact">
+    <div class="container">
+         <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> ramaiahpadala888@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 8897889127</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/davidramaiahp/"><i class="fa-brands fa-facebook"></i></a>
+<!--                     <a href="#"><i class="fa-brands fa-twitter-square"></i></a> -->
+                    <a href="https://www.instagram.com/davidramaiahp/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/davidramaiahp"><i class="fa-brands fa-linkedin"></i></a>
+                    
+                </div>
+                <a href="images/David_CV.pdf" download class="btn btn2" >Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message "></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+         </div>
+    </div>
+</div>
+
+<div class="copyright">
+    <p>Copyright @ Ramaiah Padala 2024</p>
+</div>
+
+   <script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    
+   </script>
+
+   <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+   </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzBMd8icTDXLvzc2ks0n6NXInQCprbsTDNUphS9dhN4O-0Xi8jK-i9H9lVpDTRUSgKWHA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent succesfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            
+
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+</html>
