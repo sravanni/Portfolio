@@ -38,9 +38,9 @@
    <div id="about">
     <div class="container">
          <div class="row">
-            <div class="about-col-1">
+<!--             <div class="about-col-1">
                 <img src="images/user.jpeg" alt="">
-            </div>
+            </div> -->
             <div class="about-col-2">
                 <h1 class="sub-title ">About Me</h1>
                 <p>
@@ -97,8 +97,8 @@
                 <i class="fa-solid fa-code"></i> 
                 <h2>Full Stack Developnment</h2>
                 <p>Specializing in full stack development using Java to build robust, scalable applications that deliver seamless user experiences.</p>
-                <a href="#">Learn more</a> -->
-            </div> 
+                <a href="#">Learn more</a> 
+            </div> -->
 
         </div>
     </div>
@@ -116,17 +116,17 @@
                     <!-- <a href="https://www.facebook.com/davidramaiahp/"><i class="fa-brands fa-facebook"></i></a>
 <!--                     <a href="#"><i class="fa-brands fa-twitter-square"></i></a> --
                     <a href="https://www.instagram.com/davidramaiahp/"><i class="fa-brands fa-instagram"></i></a> -->
-                    <a href="https://www.linkedin.com/in/davidramaiahp"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                     
                 </div>
-                <a href="images/David_CV.pdf" download class="btn btn2" >Download CV</a>
+                <a href="images/#Resume" download class="btn btn2" >Download CV</a>
             </div>
          </div>
     </div>
 </div>
 
 <div class="copyright">
-    <p>Copyright @ Ramaiah Padala 2024</p>
+    <p>Copyright @ Sravani 2024</p>
 </div>
 
    <script>
@@ -157,27 +157,6 @@
             sidemenu.style.right = "-200px";
         }
    </script>
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzBMd8icTDXLvzc2ks0n6NXInQCprbsTDNUphS9dhN4O-0Xi8jK-i9H9lVpDTRUSgKWHA/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-
-        form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent succesfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            
-
-            .catch(error => console.error('Error!', error.message))
-        })
-    </script>
 
 </body>
 </html>
