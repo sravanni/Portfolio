@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="text-align: center;">
+  <header>
+    <h1>Personal Budget Tracer</h1>
+    <nav>
+      <a href="Home">Home</a>
+      <a href="Add Expense">/Add Expense</a>
+      <a href="View Budget">/View Budget</a>
+    </nav>
+  </header>
+  <section>
+    <h3>Welcome to the Personal Budget Tracer</h3>
+    <p>This personal budget tracer is a financial plan prepared to track the income and expenses for specific period, usually monthly.</p>
+  </section>
+  <section>
+    <h3>Add New Income or Expense</h3>
+    <form>
+      <label for="number">Amount:</label>
+      <input type="text" name="Amount" placeholder="Enter the Amount"><br>
+      <label for="text">Category:</label>
+      <select>
+        <option>Select a Category</option>
+        <option>Food</option>
+        <option>Transportation</option>
+        <option>Entertainment</option>
+      </select><br>
+      <label for="text">Description:</label>
+      <input type="text" name="Description" id="Description" placeholder="Enter the Description">
+      <br>
+      <label for="date">Date:</label>
+      <input type="date"><br>
+      <label for="text">Type:</label>
+      <input type="radio" name="type">Income</input>
+      <input type="radio" name="type">Expense</input><br><br>
+      <button>Add Entry</button>
+    </form>
+    <h3>Budget Summary</h3>
+    <table border align="center">
+      <thead>
+        <tr>
+          <th rowspan="2">Category</th>
+          <th colspan="2">Transaction Details</th>
+          <th rowspan="2">Date</th>
+          <th rowspan="2">Status</th>
+          <th rowspan="2">Type</th>
+        </tr>
+        <tr>
+          <th>Amount</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Food</td>
+          <td>$200</td>
+          <td>Groceries for the week</td>
+          <td>02-01-2025</td>
+          <td>Completed</td>
+          <td>Expense</td>
+        </tr>
+        <tr>
+          <td>Trnsportation</td>
+          <td>$100</td>
+          <td>Monthly Transport Charges</td>
+          <td>03-01-2025</td>
+          <td>Completed</td>
+          <td>Expense</td>
+        </tr>
+        <tr>
+          <td>Salary</td>
+          <td>$3500</td>
+          <td>Monthly Salary</td>
+          <td>05-01-2025</td>
+          <td>Completed</td>
+          <td>Income</td>
+        </tr>
+        <tr>
+          <td>Savings</td>
+          <td>$500</td>
+          <td>Emergency Fund Deposit</td>
+          <td>10-01-2025</td>
+          <td>Pending</td>
+          <td>Expense</td>
+        </tr>
+        <tr>
+          <td>Entertainment</td>
+          <td>$50</td>
+          <td>Weekend Movie</td>
+          <td>12-01-2025</td>
+          <td>Completed</td>
+          <td>Expense</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Utilities</td>
+          <td>$150</td>
+          <td>Electricity Bill</td>
+          <td>20-01-2025</td>
+          <td>Pending</td>
+          <td>Expense</td>
+        </tr>
+        <tr>
+          <td>$50</td>
+          <td>Water Bill</td>
+          <td>20-01-2025</td>
+          <td>Completed</td>
+          <td>Expense</td>
+        </tr>
+      </tbody>
+
+    </table>
+  </section>
+</body>
+</html>
